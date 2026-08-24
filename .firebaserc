@@ -7,6 +7,9 @@
       "hosting": {
         "realmhunt": [
           "realmhunt-rabbitninja"
+        ],
+        "root": [
+          "rabbitninja"
         ]
       }
     }
