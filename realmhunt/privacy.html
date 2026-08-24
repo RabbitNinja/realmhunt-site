@@ -61,7 +61,7 @@
 
 <h2>Information we collect</h2>
 
-<p><strong>Account information.</strong> When you create an account (email/password or "Sign in with Google"), we collect your email address and the display name you choose. Guest/party play (used for one-off group hunts via Party Kit) uses anonymous sign-in and collects no personal information at all &mdash; no email, no name beyond a fun handle you pick for that session.</p>
+<p><strong>Account information.</strong> You can create an account with email/password, or sign in with Google, Apple, or Game Center. Signing in with Google or Apple shares your email address (or, if you choose Apple's "Hide My Email" option, a private relay address that forwards to you) and the display name you choose &mdash; we never receive your password for any of these. Signing in with Game Center shares your Game Center player identity, which our server verifies directly with Apple; we don't receive your Apple ID or password. You can also <strong>play as a guest</strong> &mdash; an anonymous account with no email or personal information, just a fun display name you pick &mdash; whether jumping in solo or joining a one-off group hunt via Party Kit. A guest account can later be linked to a Google, Apple, or email/password identity from Settings, so progress isn't lost if the app is reinstalled or you switch devices.</p>
 
 <p><strong>Precise location.</strong> RealmHunt is a location-based game &mdash; we collect your device's GPS location while you're playing to show you nearby treasures, place them realistically in AR, and track your progress through a hunt. Location is only collected while the app is in use, not in the background.</p>
 
@@ -86,7 +86,7 @@
   <li>A child's location is only tracked during an active family hunt the parent set up, using the latest position only (not a location history).</li>
   <li>Parents can see their child's live location during an active hunt and receive a safety alert if the child leaves a set boundary.</li>
   <li>We do not serve targeted advertising to anyone, and RealmHunt has no analytics or ad-tracking SDK integrated at all &mdash; nothing in the app profiles behavior for advertising purposes, for children or adults.</li>
-  <li>Guest/party mode (used for e.g. birthday parties) collects zero personal information from any participant, including children &mdash; anonymous sign-in, a chosen display name only.</li>
+  <li>Guest mode (whether playing solo or joining a group hunt, e.g. a birthday party, via Party Kit) collects zero personal information from any participant, including children &mdash; anonymous sign-in, a chosen display name only.</li>
 </ul>
 </div>
 <p>If you're a parent and have questions about your child's data, or want it removed, contact <a href="mailto:askrealmhunt@rabbitninja.co">askrealmhunt@rabbitninja.co</a> &mdash; see also Account Deletion below, which a parent can use on their own linked family account.</p>
@@ -103,9 +103,9 @@
 
 <h2>Who we share information with</h2>
 <ul>
-  <li><strong>Firebase/Google Cloud</strong> &mdash; our backend hosting, authentication, and database provider. Your account and gameplay data is stored there.</li>
+  <li><strong>Firebase/Google Cloud</strong> &mdash; our backend hosting, authentication, and database provider. However you sign in (email, Google, Apple, Game Center, or guest), your account and gameplay data is ultimately stored there.</li>
   <li><strong>Google Gemini API</strong> &mdash; used to generate the riddles/clues you see in hunts. Approximate location context (e.g. a nearby landmark name, not your precise coordinates or identity) may be sent to generate location-relevant clue text.</li>
-  <li><strong>Apple</strong> &mdash; for sign-in (Sign in with Google still routes account creation through Firebase, but push notifications and all purchases go through Apple's own APNs and StoreKit systems).</li>
+  <li><strong>Apple</strong> &mdash; if you choose Sign in with Apple or Game Center, push notifications (APNs), and all purchases (StoreKit). Game Center sign-in works by our server verifying your identity directly with Apple's servers before creating your RealmHunt session.</li>
 </ul>
 <p>We do not share your data with data brokers or advertisers, and we do not sell it to any third party.</p>
 
