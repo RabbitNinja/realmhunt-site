@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "target": "realmhunt",
+    "public": ".",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

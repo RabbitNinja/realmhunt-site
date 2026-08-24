@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ar-hunt-stg"
+  },
+  "targets": {
+    "ar-hunt-stg": {
+      "hosting": {
+        "realmhunt": [
+          "realmhunt-rabbitninja"
+        ]
+      }
+    }
+  }
+}
