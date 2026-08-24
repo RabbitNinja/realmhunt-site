@@ -8,14 +8,19 @@
 <style>
   :root {
     color-scheme: dark;
-    --bg: #101018;
-    --bg-alt: #16161f;
+    --bg: #1A1A2E;
+    --bg-alt: #16213E;
+    --bg-deep: #0A050F;
     --text: #f4f4f9;
-    --muted: #a0a0b8;
+    --muted: #A0A0B0;
     --accent: #E94560;
+    --accent2: #4FC3F7;
+    --gold: #FFD700;
     --accent-soft: rgba(233, 69, 96, 0.14);
-    --border: #26263a;
-    --card: #1a1a26;
+    --accent2-soft: rgba(79, 195, 247, 0.14);
+    --gold-soft: rgba(255, 215, 0, 0.14);
+    --border: rgba(255, 255, 255, 0.08);
+    --card: #16213E;
   }
   * { box-sizing: border-box; }
   body {
@@ -37,7 +42,8 @@
     text-align: center;
     background:
       radial-gradient(ellipse 700px 420px at 50% -10%, var(--accent-soft), transparent 70%),
-      var(--bg);
+      radial-gradient(ellipse 600px 400px at 85% 10%, var(--accent2-soft), transparent 70%),
+      linear-gradient(160deg, var(--bg-deep), var(--bg) 55%, #1A0A29);
     border-bottom: 1px solid var(--border);
   }
   .wordmark {
@@ -45,8 +51,13 @@
     font-weight: 800;
     letter-spacing: -0.02em;
     margin: 0 0 18px;
+    background: linear-gradient(90deg, var(--accent), #FF8C70);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 18px var(--accent-soft));
+    display: inline-block;
   }
-  .wordmark .hunt { color: var(--accent); }
   .tagline {
     font-size: 1.3rem;
     color: var(--text);
@@ -129,6 +140,8 @@
     margin-bottom: 16px;
     color: var(--accent);
   }
+  .feature-icon.blue { background: var(--accent2-soft); color: var(--accent2); }
+  .feature-icon.gold { background: var(--gold-soft); color: var(--gold); }
   .feature-card h3 {
     margin: 0 0 8px;
     font-size: 1.1rem;
@@ -181,7 +194,7 @@
     display: flex;
     gap: 12px;
     align-items: flex-start;
-    background: var(--card);
+    background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 16px 18px;
@@ -251,7 +264,7 @@
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">
+        <div class="feature-icon blue">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 12.5 12 4l7.5 8.5M6 11v8a1 1 0 0 0 1 1h3v-5h4v5h3a1 1 0 0 0 1-1v-8"/></svg>
         </div>
         <h3>Collect &amp; Evolve Pets</h3>
@@ -259,7 +272,7 @@
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">
+        <div class="feature-icon gold">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 3 6v6c0 5 4 9 9 10 5-1 9-5 9-10V6l-9-4Z"/></svg>
         </div>
         <h3>Relics &amp; Global Events</h3>
@@ -267,7 +280,7 @@
       </div>
 
       <div class="feature-card">
-        <div class="feature-icon">
+        <div class="feature-icon blue">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 3 7v5c0 5.2 3.6 9 9 10 5.4-1 9-4.8 9-10V7l-9-4Z"/><path d="m9 12 2 2 4-4"/></svg>
         </div>
         <h3>Player Abilities</h3>
