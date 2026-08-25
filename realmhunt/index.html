@@ -35,28 +35,32 @@
     margin: 0 auto;
     padding: 0 24px;
   }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 
   /* Hero */
   header.hero {
-    padding: 96px 0 88px;
-    text-align: center;
-    background:
-      radial-gradient(ellipse 700px 420px at 50% -10%, var(--accent-soft), transparent 70%),
-      radial-gradient(ellipse 600px 400px at 85% 10%, var(--accent2-soft), transparent 70%),
-      linear-gradient(160deg, var(--bg-deep), var(--bg) 55%, #1A0A29);
-    border-bottom: 1px solid var(--border);
+    line-height: 0;
   }
-  .wordmark {
-    font-size: 2.6rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin: 0 0 18px;
-    background: linear-gradient(90deg, var(--accent), #FF8C70);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    filter: drop-shadow(0 0 18px var(--accent-soft));
-    display: inline-block;
+  .hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  section.hero-copy {
+    padding: 56px 0 64px;
+    text-align: center;
+    background: linear-gradient(160deg, var(--bg-deep), var(--bg) 55%, #1A0A29);
+    border-bottom: 1px solid var(--border);
   }
   .tagline {
     font-size: 1.3rem;
@@ -236,8 +240,12 @@
 <body>
 
 <header class="hero">
+  <h1 class="sr-only">RealmHunt</h1>
+  <img class="hero-img" src="hero-bg.jpg" alt="RealmHunt — two adventurers wearing glowing AR goggles stand on a cobblestone street at dusk, torch in hand, with a sunlit meadow and mountains in the distance">
+</header>
+
+<section class="hero-copy">
   <div class="wrap">
-    <div class="wordmark">Realm<span class="hunt">Hunt</span></div>
     <p class="tagline">Your neighborhood is full of treasure.</p>
     <p class="subtagline">An augmented-reality treasure hunt — find real hidden treasures nearby, collect and evolve pets, and uncover riddle-driven adventures with friends and family.</p>
     <div class="badge-row">
@@ -247,7 +255,7 @@
       </span>
     </div>
   </div>
-</header>
+</section>
 
 <section class="features">
   <div class="wrap">
