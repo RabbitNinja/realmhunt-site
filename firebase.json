@@ -7,8 +7,25 @@
       "ignore": [
         "firebase.json",
         ".firebaserc",
-        "**/.*",
+        "**/.DS_Store",
         "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/i/**",
+          "destination": "/invite.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/.well-known/apple-app-site-association",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        }
       ]
     },
     {

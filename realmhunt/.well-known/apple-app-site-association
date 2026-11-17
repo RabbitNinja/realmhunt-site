@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["FXB89FQTXD.com.rabbitninja.RealmHunt"],
+        "components": [
+          { "/": "/i/*", "comment": "Friend invites open the app" }
+        ]
+      }
+    ]
+  }
+}
